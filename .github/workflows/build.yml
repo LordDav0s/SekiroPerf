@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: Install MinGW-w64
         run: sudo apt-get update && sudo apt-get install -y g++-mingw-w64-x86-64
@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: make dist
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: SekiroPerf
           path: dist/SekiroPerf/
