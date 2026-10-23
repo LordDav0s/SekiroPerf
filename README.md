@@ -16,6 +16,9 @@ Works with [Sekiro Mod Engine](https://www.nexusmods.com/sekiro/mods/6), or stan
 
 ## Install
 
+Download the zip from the [latest release](https://github.com/LordDav0s/SekiroPerf/releases/latest)
+and extract it. The files you need are `sekiro_perf.dll` and `sekiro_perf.ini`.
+
 ### With Mod Engine
 
 1. Copy `sekiro_perf.dll` and `sekiro_perf.ini` into the game folder (next to `sekiro.exe`).

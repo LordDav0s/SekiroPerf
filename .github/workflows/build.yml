@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v7
 
@@ -23,3 +25,14 @@ jobs:
         with:
           name: SekiroPerf
           path: dist/SekiroPerf/
+
+      # Pushing a tag like v1.2.3 publishes a release with the zipped build attached.
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          zip_name="SekiroPerf-${GITHUB_REF_NAME}.zip"
+          (cd dist && zip -r "../${zip_name}" SekiroPerf)
+          gh release create "$GITHUB_REF_NAME" "$zip_name" --repo "$GITHUB_REPOSITORY" \
+            --title "SekiroPerf ${GITHUB_REF_NAME}" --generate-notes --verify-tag
