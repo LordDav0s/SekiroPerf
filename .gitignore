@@ -1,0 +1,23 @@
+# Build output
+build/
+dist/SekiroPerf/
+*.zip
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+out/
+
+# Editors / IDEs
+.vs/
+.vscode/
+.idea/
+*.user
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Runtime
+*.log

@@ -1,0 +1,3 @@
+LIBRARY sekiro_perf
+EXPORTS
+    DirectInput8Create
