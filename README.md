@@ -104,9 +104,6 @@ On a 60 Hz monitor the FPS cap doesn't matter (VSync holds you at 60) unless you
 
 ## Limitations
 
-- Not tested in-game yet. The memory signatures are the ones SekiroFpsUnlockAndMore uses for
-  sekiro.exe 1.2.0.0–1.5.0.0 (game patches 1.02–1.06) and the portable parts are unit-tested, but
-  the upscaler hasn't been run in Sekiro yet. Expect rough edges until it has.
 - The whole frame is upscaled, HUD included, so text is slightly softer than native.
 - With a lowered in-game resolution, the mouse cursor in menus may not line up with what's on screen.
   Gameplay and controllers are unaffected.
